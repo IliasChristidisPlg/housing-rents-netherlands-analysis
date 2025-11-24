@@ -65,6 +65,19 @@ To evaluate the relationship between supply and rents:
 
 Both tests were conducted at a 95% confidence level.
 
+## Notebook Structure
+
+The main analysis is implemented in `notebooks/analysis.ipynb`, which is organised into the following steps:
+
+1. **Setup and Configuration** – import libraries, configure plotting style, define data and output paths.  
+2. **Data Loading** – load the rent increase and housing stock datasets from CBS StatLine.  
+3. **Data Cleaning and Transformation** – remove metadata/footer rows, fix headers, convert data types and prepare region–year level tables.  
+4. **Data Validation** – check for missing values, validate ranges, confirm coverage by region and year.  
+5. **Exploratory Data Analysis (EDA)** – analyse rent trends, housing stock changes, construction vs demolition, and peak years.  
+6. **Visualisation** – generate time series plots, stock evolution charts, construction vs demolition comparisons and heatmaps by city.  
+7. **Statistical Analysis** – compute Pearson correlations between rent increases and supply metrics (new construction, net stock balance) and summarise city-level statistics.  
+8. **Summary and Insights** – consolidate main findings and interpret the relationship between rent dynamics and housing supply.
+
 ---
 
 ## 5. Key Findings
@@ -117,8 +130,18 @@ In highly demanded cities like Amsterdam and Rotterdam, rent increases remain st
    
 ---
 
+## 10. Limitations and Future Work
 
-## 10. Conclusion
+- The analysis focuses on annual aggregates and does not include micro-level data such as individual contracts or neighbourhood-level dynamics.  
+- Only two core datasets are used (rent increase and housing stock). Other potentially relevant factors such as income growth, inflation, or vacancy rates are not yet incorporated.  
+- The correlation analysis is based on a relatively short time span (around 10 years), which limits the statistical power for detecting subtle relationships.
+
+Future extensions could include:
+- Adding income or affordability indicators by region.  
+- Extending the analysis with CPI or wage data to compare rent growth to broader economic conditions.  
+- Including more granular spatial data (e.g. neighbourhoods) if available.
+- 
+## 11. Conclusion
 
 This analysis reveals that despite a significant increase in housing stock across the Netherlands, rent prices continued to rise, particularly in top cities like Amsterdam. The absence of a strong statistical link between annual supply changes and rent increases indicates that other factors—such as market regulation, inflation, or tenant turnover via rent harmonisation—play key roles. These findings provide insight into affordability pressures in the Dutch housing market and demonstrate applied data-analysis skills across multiple datasets and techniques.
 
